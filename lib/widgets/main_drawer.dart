@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../screens/filters_screen.dart';
 
 class MainDrawer extends StatelessWidget {
   @override
@@ -37,6 +38,7 @@ class MainDrawer extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            onTap: () => Navigator.of(context).pushReplacementNamed('/'),
           ),
           ListTile(
             leading: Icon(
@@ -51,6 +53,8 @@ class MainDrawer extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            onTap: () => Navigator.of(context)
+                .pushReplacementNamed(FilterScreen.routeName),
           ),
         ],
       ),
